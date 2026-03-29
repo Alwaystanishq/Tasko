@@ -4,6 +4,7 @@ import useTheme from "@/hooks/useTheme";
 import { createHomeStyles } from "@/assets/styles/home.styles";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "@/components/Header";
+import TodoInput from "@/components/TodoInput";
 
 export default function Index() {
   const { toggleDarkMode, colors } = useTheme();
@@ -17,6 +18,7 @@ export default function Index() {
       <StatusBar barStyle={colors.statusBarStyle} />
       <SafeAreaView style={HomeStyles.safeArea}>
         <Header />
+        <TodoInput />
         <TouchableOpacity onPress={toggleDarkMode}>
           <Text>Toggle Theme</Text>
         </TouchableOpacity>
